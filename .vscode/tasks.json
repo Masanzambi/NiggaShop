@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "PhotoCraft: iniciar servidor web",
+            "type": "shell",
+            "command": "trunk serve",
+            "options": {
+                "cwd": "${workspaceFolder}/photocraft-main/apps/photocraft-web"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "photocraft",
+                "pattern": {
+                    "regexp": "^(.*)$",
+                    "message": 1
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": ".*(127\\.0\\.0\\.1:8765|localhost:8765).*"
+                }
+            }
+        }
+    ]
+}
